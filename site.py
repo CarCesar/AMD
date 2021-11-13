@@ -222,10 +222,10 @@ def sidebar(MENU):
             modelinho = coldo.selectbox('Modelo:',('','RidgeCV','BaysianRidge'))
         if modelinho != '':
             if option == 'VED':
-                st.table(tableVED('.\Dados\dados2019.csv','.\Dados\dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
+                st.table(tableVED('./Dados/dados2019.csv','./Dados/dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
                 st.write('**Legenda : **'+t[0]+sp+t[1]+sp+t[2]+sp+t[3]+sp+t[4]+sp+t[5])
             if option == 'PT':
-                st.table(tablePT(link + '/Dados/dados2019.csv','.\Dados\dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
+                st.table(tablePT(link + '/Dados/dados2019.csv',link + './Dados/dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
                 st.write('**Legenda : **'+t[3]+sp+t[4]+sp+t[5])
     elif MENU == "Pratica":
         st.markdown(tpratica)

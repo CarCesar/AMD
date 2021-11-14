@@ -223,10 +223,10 @@ def sidebar(MENU):
             modelinho = coldo.selectbox('Modelo:',('','RidgeCV','BaysianRidge'))
         if modelinho != '':
             if option == 'VED':
-                st.table(tableVED('.\Dados\dados2019.csv','.\Dados\dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
+                st.table(tableVED('dados2019.csv','dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
                 st.write('**Legenda : **'+t[0]+sp+t[1]+sp+t[2]+sp+t[3]+sp+t[4]+sp+t[5])
             if option == 'PT':
-                st.table(tablePT('.\Dados\dados2019.csv','.\Dados\dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
+                st.table(tablePT('dados2019.csv','dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
                 st.write('**Legenda : **'+t[3]+sp+t[4]+sp+t[5])
     elif MENU == "Pratica":
         st.markdown(tpratica)
@@ -245,7 +245,7 @@ def sidebar(MENU):
             if option == 'VED':
                 if ano == '2019':
                     if rodada == 33:
-                        st.table(tableVED('Dados\dados2019.csv','Dados\\ate33.csv',33,False,modelinho))
+                        st.table(tableVED('dados2019.csv','ate33.csv',33,False,modelinho))
                     if rodada == 35:
                         st.table(tableVED('dados2019.csv','ate35.csv',35,False,modelinho))
                 if ano == '2020':

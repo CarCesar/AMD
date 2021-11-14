@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib
 from sklearn.preprocessing import MaxAbsScaler
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.feature_selection import SelectFromModel

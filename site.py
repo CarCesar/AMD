@@ -245,37 +245,37 @@ def sidebar(MENU):
             if option == 'VED':
                 if ano == '2019':
                     if rodada == 33:
-                        st.table(tableVED('.\Dados\dados2019.csv','.\Dados\\ate33.csv',33,False,modelinho))
+                        st.table(tableVED('Dados\dados2019.csv','Dados\\ate33.csv',33,False,modelinho))
                     if rodada == 35:
-                        st.table(tableVED('.\Dados\dados2019.csv','.\Dados\\ate35.csv',35,False,modelinho))
+                        st.table(tableVED('dados2019.csv','ate35.csv',35,False,modelinho))
                 if ano == '2020':
                     if rodada == 33:
-                        st.table(tableVED('.\Dados\dados2020.csv','.\Dados\\ate33.csv',33,False,modelinho))
+                        st.table(tableVED('dados2020.csv','ate33.csv',33,False,modelinho))
                     if rodada == 35:
-                        st.table(tableVED('.\Dados\dados2020.csv','.\Dados\\ate35.csv',35,False,modelinho))
+                        st.table(tableVED('dados2020.csv','ate35.csv',35,False,modelinho))
                 if ano == '2019-2020':
                     if rodada == 33:
-                        st.table(tableVED('.\Dados\oi1920.csv','.\Dados\\ate33.csv',33,False,modelinho))
+                        st.table(tableVED('oi1920.csv','ate33.csv',33,False,modelinho))
                     if rodada == 35:
-                        st.table(tableVED('.\Dados\oi1920.csv','.\Dados\\ate35.csv',35,False,modelinho))
+                        st.table(tableVED('oi1920.csv','ate35.csv',35,False,modelinho))
                 st.write('**Legenda : **'+t[0]+sp+t[1]+sp+t[2]+sp+t[3]+sp+t[4])
             if option == 'PT':
                 #st.table(tablePT('.\Dados\dados2019.csv','.\Dados\\ate33.csv',33,False))
                 if ano == '2019':
                     if rodada == 33:
-                        st.table(tablePT('.\Dados\dados2019.csv','.\Dados\\ate33.csv',33,False,modelinho))
+                        st.table(tablePT('dados2019.csv','ate33.csv',33,False,modelinho))
                     if rodada == 35:
-                        st.table(tablePT('.\Dados\dados2019.csv','.\Dados\\ate35.csv',35,False,modelinho))
+                        st.table(tablePT('dados2019.csv','ate35.csv',35,False,modelinho))
                 if ano == '2020':
                     if rodada == 33:
-                        st.table(tablePT('.\Dados\dados2020.csv','.\Dados\\ate33.csv',33,False,modelinho))
+                        st.table(tablePT('dados2020.csv','ate33.csv',33,False,modelinho))
                     if rodada == 35:
-                        st.table(tablePT('.\Dados\dados2020.csv','.\Dados\\ate35.csv',35,False,modelinho))
+                        st.table(tablePT('dados2020.csv','ate35.csv',35,False,modelinho))
                 if ano == '2019-2020':
                     if rodada == 33:
                         st.table(tablePT('oi1920.csv','ate33.csv',33,False,modelinho))
                     if rodada == 35:
-                        st.table(tablePT('.\Dados\oi1920.csv','.\Dados\\ate35.csv',35,False,modelinho))
+                        st.table(tablePT('oi1920.csv','ate35.csv',35,False,modelinho))
                 st.write('**Legenda : **'+t[3]+sp+t[4])
 
 

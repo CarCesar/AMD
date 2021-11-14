@@ -172,7 +172,7 @@ sc2.image('carlos2.png',caption = 'Carlos César')
 
 b1,b,b2=st.columns([15,1,13])
 b1.title('Previsão SERIE B')
-b1.markdown('''Previsão de um jeito maluco,as vezes, inlogico, da classificação final da SERIE B
+b1.markdown('''Previsão de um jeito maluco,as vezes, inlógico, da classificação final da SERIE B
 
 ''')
 
@@ -180,7 +180,7 @@ b1.markdown('''Previsão de um jeito maluco,as vezes, inlogico, da classificaç�
 menu = b1.radio('Faça sua escolha',('Teste','Pratica'),index = 1)
 b2.write('\n')
 #b2.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKHxnQQjFmUddwNTLlcZzuJwgsUE_hLrO3VA&usqp=CAU')
-b2.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8tvxY0cVAiyCMMUJzkmmnZC6LJ8Fq5lSOg&usqp=CAU', caption = 'Saudade de 2017...')
+b2.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8tvxY0cVAiyCMMUJzkmmnZC6LJ8Fq5lSOg&usqp=CAU', caption = 'Saudade de 2017...',width = 300)
 
 tteste="""# Teste
 Não sabemos se foi a melhor forma de trabalhar com os dados, porém achamos legais os resultados.
@@ -194,7 +194,7 @@ Escolha qual tipo de tabela com qual modelo quer ver...
 tpratica = '''# Prática
 
 Aqui você deve escolher: 
-- se preve:
+- se prevê:
     - o numero de pontos(PT) 
     - o numero de V/E/D para ter os pontos(VED)
 - um modelo do scikit learn (selecionamos alguns p/ cada tipo)
@@ -223,10 +223,10 @@ def sidebar(MENU):
             modelinho = coldo.selectbox('Modelo:',('','RidgeCV','BaysianRidge'))
         if modelinho != '':
             if option == 'VED':
-                st.table(tableVED('./Dados/dados2019.csv','./Dados/dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
+                st.table(tableVED('.\Dados\dados2019.csv','.\Dados\dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
                 st.write('**Legenda : **'+t[0]+sp+t[1]+sp+t[2]+sp+t[3]+sp+t[4]+sp+t[5])
             if option == 'PT':
-                st.table(tablePT('dados2019.csv','dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
+                st.table(tablePT('.\Dados\dados2019.csv','.\Dados\dados2020.csv',38,True,modelinho).style.background_gradient(axis=None,cmap='RdYlGn_r', subset=['diff']))
                 st.write('**Legenda : **'+t[3]+sp+t[4]+sp+t[5])
     elif MENU == "Pratica":
         st.markdown(tpratica)

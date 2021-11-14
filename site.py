@@ -273,7 +273,7 @@ def sidebar(MENU):
                         st.table(tablePT('.\Dados\dados2020.csv','.\Dados\\ate35.csv',35,False,modelinho))
                 if ano == '2019-2020':
                     if rodada == 33:
-                        st.table(tablePT('.\Dados\oi1920.csv','.\Dados\\ate33.csv',33,False,modelinho))
+                        st.table(tablePT('oi1920.csv','ate33.csv',33,False,modelinho))
                     if rodada == 35:
                         st.table(tablePT('.\Dados\oi1920.csv','.\Dados\\ate35.csv',35,False,modelinho))
                 st.write('**Legenda : **'+t[3]+sp+t[4])
